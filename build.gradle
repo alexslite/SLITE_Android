@@ -1,0 +1,28 @@
+buildscript {
+    ext {
+        navgationComponentVersion = "2.6.0"
+        coroutinesVersion = "1.6.4"
+        koinVersion = "3.4.2"
+        jetpackComposeVersion = "1.4.3"
+        cameraXVersion = "1.2.3"
+        roomVersion = "2.5.2"
+        glideVersion = "4.14.1"
+        nordicSemiBleVersion = "2.5.1"
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navgationComponentVersion"
+        classpath 'com.google.gms:google-services:4.3.15'
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

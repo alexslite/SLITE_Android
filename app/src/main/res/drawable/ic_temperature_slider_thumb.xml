@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/light_configuration_thumb_background" />
+            <size
+                android:width="@dimen/light_configuration_slider_thumb_size"
+                android:height="@dimen/light_configuration_slider_thumb_size" />
+            <stroke
+                android:width="@dimen/light_configuration_thumb_stroke_width"
+                android:color="@color/light_configuration_thumb_stroke_color" />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="@dimen/lights_list_slider_thumb_inner_spacing"
+        android:drawable="@drawable/ic_temperature"
+        android:end="@dimen/lights_list_slider_thumb_temperature_inner_spacing_horizontal"
+        android:start="@dimen/lights_list_slider_thumb_temperature_inner_spacing_horizontal"
+        android:top="@dimen/lights_list_slider_thumb_inner_spacing" />
+</layer-list>

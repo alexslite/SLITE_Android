@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <size
+                android:width="@dimen/lights_list_power_button_size"
+                android:height="@dimen/lights_list_power_button_size" />
+            <solid android:color="@color/lights_list_default_light_color" />
+        </shape>
+    </item>
+</layer-list>

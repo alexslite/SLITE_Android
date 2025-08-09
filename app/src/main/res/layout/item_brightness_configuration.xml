@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/vertical_guideline"
+    tools:background="@color/dark_grey">
+
+    <ImageView
+        android:id="@+id/brightnessIconIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_brightness"
+        app:layout_constraintBottom_toBottomOf="@id/brightnessLabelTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/brightnessValueTV"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/brightnessValueTV"
+        style="@style/Subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/light_configuration_value_label_margin_start"
+        android:layout_marginEnd="@dimen/horizontal_guideline"
+        android:ellipsize="end"
+        android:lines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/brightnessIconIV"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="50%" />
+
+    <TextView
+        android:id="@+id/brightnessLabelTV"
+        style="@style/Info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/light_configuration_preset_radio_button_margin_end"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/light_configuration_brightness_label_text"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="@id/brightnessValueTV"
+        app:layout_constraintStart_toStartOf="@id/brightnessValueTV"
+        app:layout_constraintTop_toBottomOf="@id/brightnessValueTV" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/brightnessSlider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/light_configuration_slider_margin"
+        android:stepSize="1"
+        android:valueFrom="0"
+        android:layout_marginHorizontal="@dimen/light_configuration_brightness_slider_margin_horizontal"
+        android:valueTo="100"
+        app:labelBehavior="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brightnessLabelTV"
+        app:thumbRadius="@dimen/light_configuration_slider_thumb_radius"
+        app:trackColorActive="@color/light_configuration_track_active_color"
+        app:trackColorInactive="@color/light_configuration_track_inactive_color"
+        app:trackHeight="@dimen/light_configuration_slider_track_height"
+        tools:value="50" />
+
+    <RadioGroup
+        android:id="@+id/brightnessPresetsRG"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_guideline"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brightnessSlider">
+
+        <RadioButton
+            android:id="@+id/firstBrightnessOptionRB"
+            style="@style/LightPresetRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/light_configuration_preset_radio_button_height"
+            android:layout_marginEnd="@dimen/light_configuration_preset_radio_button_margin_end"
+            android:layout_weight="1"
+            tools:text="0%" />
+
+        <RadioButton
+            android:id="@+id/secondBrightnessOptionRB"
+            style="@style/LightPresetRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/light_configuration_preset_radio_button_height"
+            android:layout_marginEnd="@dimen/light_configuration_preset_radio_button_margin_end"
+            android:layout_weight="1"
+            tools:text="25%" />
+
+        <RadioButton
+            android:id="@+id/thirdBrightnessOptionRB"
+            style="@style/LightPresetRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/light_configuration_preset_radio_button_height"
+            android:layout_marginEnd="@dimen/light_configuration_preset_radio_button_margin_end"
+            android:layout_weight="1"
+            tools:text="50%" />
+
+        <RadioButton
+            android:id="@+id/fourthBrightnessOptionRB"
+            style="@style/LightPresetRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/light_configuration_preset_radio_button_height"
+            android:layout_marginEnd="@dimen/light_configuration_preset_radio_button_margin_end"
+            android:layout_weight="1"
+            tools:text="75%" />
+
+        <RadioButton
+            android:id="@+id/fifthBrightnessOptionRB"
+            style="@style/LightPresetRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/light_configuration_preset_radio_button_height"
+            android:layout_weight="1"
+            tools:text="100%" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class=".SwipeLayoutActionBinding">
+
+        <variable
+            name="actionName"
+            type="String" />
+
+        <variable
+            name="actionIcon"
+            type="android.graphics.drawable.Drawable" />
+
+        <variable
+            name="backgroundColor"
+            type="Integer" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_light_item_swipe_action"
+        android:backgroundTint="@{backgroundColor}"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_light_item_swipe_action"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:backgroundTint="@color/green"
+        tools:layout_height="@dimen/lights_list_light_item_collapsed_height"
+        tools:layout_width="72dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@{actionIcon}"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_rename" />
+
+        <TextView
+            style="@style/Info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/lights_swipe_action_text_margin_top"
+            android:lines="1"
+            android:text="@{actionName}"
+            tools:text="Rename" />
+    </LinearLayout>
+</layout>

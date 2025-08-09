@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <corners android:radius="@dimen/light_configuration_effect_radio_button_corner_radius" />
+    <stroke
+        android:width="@dimen/light_configuration_effect_radio_button_unselected_stroke_width"
+        android:color="@color/light_configuration_effect_radio_button_unselected_stroke_color" />
+    <size
+        android:height="@dimen/light_configuration_effect_radio_button_height" />
+    <solid android:color="@color/light_configuration_effect_radio_button_unselected_background_color" />
+</shape>

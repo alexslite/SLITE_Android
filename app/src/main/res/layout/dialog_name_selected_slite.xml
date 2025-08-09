@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corners_bottom_sheet_dialog"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/horizontal_guideline">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_sheet_dialog_dragable_area_margin_top"
+        android:src="@drawable/ic_dialog_dragable_area_indicator"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/dialogTitleTV"
+        style="@style/Subtitle"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/name_slite_title_margin_top"
+        tools:text="@string/name_slite_title" />
+
+    <TextView
+        android:id="@+id/dialogDescriptionTV"
+        style="@style/Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/name_slite_input_margin_top"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:text="@string/scenes_create_dialog_description"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/containingScenesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/delete_light_dialog_scenes_list_margin_top"
+        android:visibility="gone"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_containing_scene"
+        tools:orientation="vertical"
+        tools:visibility="visible" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sliteNameTIL"
+        style="@style/SliteTextInputLayoutTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/name_slite_input_margin_top"
+        android:hint="@string/name_slite_input_hint"
+        android:textColorHint="@color/edit_text_hint_color"
+        android:theme="@style/SliteTextInputLayoutTheme"
+        app:hintEnabled="true"
+        app:hintTextColor="@color/edit_text_hint_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sliteNameTIET"
+            style="@style/Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords"
+            android:maxLength="15" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        style="@style/Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/name_slite_input_restrictions_margin_top"
+        android:text="@string/name_slite_input_restrictions"
+        android:textColor="@color/name_slite_restrictions_text_color" />
+
+    <Button
+        android:id="@+id/confirmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/name_slite_confirm_button_margin_vertical"
+        android:enabled="false"
+        tools:text="@string/name_slite_confirm_button_text" />
+</LinearLayout>

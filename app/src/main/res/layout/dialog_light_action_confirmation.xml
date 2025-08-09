@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corners_bottom_sheet_dialog"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/horizontal_guideline">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_sheet_dialog_dragable_area_margin_top"
+        android:src="@drawable/ic_dialog_dragable_area_indicator"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/removeLightTitleTV"
+        style="@style/Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/delete_light_dialog_title_margin_top"
+        android:gravity="center"
+        tools:text="@string/delete_light_dialog_individual_light_title" />
+
+    <TextView
+        android:id="@+id/removeLightSubtitleTV"
+        style="@style/Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/delete_light_dialog_subtitle_margin_top"
+        android:gravity="center"
+        tools:text="Are you sure you want to remove “Ambient”\nfrom your list and groups?" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/containingScenesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/delete_light_dialog_scenes_list_margin_top"
+        android:visibility="gone"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_containing_scene"
+        tools:orientation="vertical"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/confirmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/delete_light_dialog_confirmation_button_margin_top"
+        tools:text="@string/delete_light_individual_confirm_button_text" />
+
+    <Button
+        android:id="@+id/cancelBtn"
+        style="@style/SliteSecondaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/delete_light_dialog_cancel_button_margin_top"
+        android:layout_marginBottom="@dimen/delete_light_dialog_cancel_button_margin_bottom"
+        android:text="@string/delete_light_cancel_button_text" />
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/horizontal_guideline"
+    android:paddingVertical="@dimen/vertical_guideline">
+
+    <TextView
+        style="@style/Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/scenes_creation_requirements_dialog_title" />
+
+    <TextView
+        style="@style/Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginVertical="@dimen/scenes_creation_requirements_dialog_description_margin_top"
+        android:gravity="center"
+        android:minLines="2"
+        android:text="@string/scenes_creation_requirements_dialog_description"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/dismissBtn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/scenes_creation_requirements_dialog_button_text"
+        android:textAppearance="@style/Button"
+        android:textColor="@color/button_text_color" />
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/vertical_guideline"
+    tools:background="@color/dark_grey">
+
+    <ImageView
+        android:id="@+id/saturationIconIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_saturation"
+        app:layout_constraintBottom_toBottomOf="@id/saturationLabelTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/saturationValueTV"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/saturationValueTV"
+        style="@style/Subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/light_configuration_value_label_margin_start"
+        android:layout_marginEnd="@dimen/horizontal_guideline"
+        android:ellipsize="end"
+        android:lines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/saturationIconIV"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="50%" />
+
+    <TextView
+        android:id="@+id/saturationLabelTV"
+        style="@style/Info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/light_configuration_preset_radio_button_margin_end"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/light_configuration_saturation_label_text"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="@id/saturationValueTV"
+        app:layout_constraintStart_toStartOf="@id/saturationValueTV"
+        app:layout_constraintTop_toBottomOf="@id/saturationValueTV" />
+
+    <com.github.antonpopoff.colorwheel.gradientseekbar.GradientSeekBar
+        android:id="@+id/saturationGradient"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/light_configuration_slider_track_height"
+        android:layout_marginHorizontal="@dimen/light_configuration_gradient_track_margin_horizontal"
+        app:asb_barSize="@dimen/light_configuration_slider_track_height"
+        app:gsb_barCornersRadius="@dimen/light_configuration_gradient_track_corner_radius"
+        app:gsb_orientation="horizontal"
+        app:gsb_startColor="@color/light_configuration_track_active_color"
+        app:layout_constraintBottom_toBottomOf="@id/saturationSlider"
+        app:layout_constraintEnd_toEndOf="@id/saturationSlider"
+        app:layout_constraintStart_toStartOf="@id/saturationSlider"
+        app:layout_constraintTop_toTopOf="@id/saturationSlider"
+        app:tb_thumbRadius="@dimen/light_configuration_gradient_thumb_radius"
+        tools:gsb_endColor="@color/red" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/saturationSlider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/light_configuration_brightness_slider_margin_horizontal"
+        android:layout_marginTop="@dimen/light_configuration_slider_margin"
+        android:stepSize="1"
+        android:value="50"
+        android:valueFrom="0"
+        android:valueTo="100"
+        app:labelBehavior="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saturationLabelTV"
+        app:thumbRadius="@dimen/light_configuration_slider_thumb_radius"
+        app:tickColor="@color/light_configuration_tick_color"
+        app:trackColorActive="@color/light_configuration_saturation_track_active_color"
+        app:trackColorInactive="@color/light_configuration_track_inactive_color"
+        app:trackHeight="@dimen/light_configuration_slider_track_height" />
+
+    <com.github.antonpopoff.colorwheel.ColorWheel
+        android:id="@+id/colorWheel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/light_configuration_color_wheel_margin_horizontal"
+        android:layout_marginBottom="@dimen/light_configuration_color_wheel_margin_bottom"
+        android:padding="@dimen/light_configuration_color_wheel_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saturationSlider"
+        app:tb_thumbRadius="@dimen/light_configuration_color_wheel_thumb_radius"
+        app:tb_thumbStrokeColor="@color/white" />
+
+    <ImageButton
+        android:id="@+id/openCameraBtn"
+        style="?actionButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/light_configuration_color_camera_button_margin_start"
+        android:layout_marginBottom="@dimen/light_configuration_color_buttons_margin_bottom"
+        android:src="@drawable/ic_camera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/openHexInputBtn"
+        style="?actionButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/light_configuration_color_color_hex_button_margin_end"
+        android:layout_marginBottom="@dimen/light_configuration_color_buttons_margin_bottom"
+        android:src="@drawable/ic_hex_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>

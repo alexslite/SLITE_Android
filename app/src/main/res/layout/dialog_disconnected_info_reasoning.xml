@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corners_bottom_sheet_dialog"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/horizontal_guideline">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_sheet_dialog_dragable_area_margin_top"
+        android:src="@drawable/ic_dialog_dragable_area_indicator"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        style="@style/Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lights_list_disconnected_light_info_dialog_title_margin_top"
+        android:text="@string/lights_list_disconnected_light_info_dialog_title" />
+
+    <TextView
+        style="@style/Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lights_list_disconnected_light_info_description_margin_top"
+        android:text="@string/lights_list_disconnected_light_info_description" />
+
+    <Button
+        android:id="@+id/reconnectBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/lights_list_disconnected_light_reconnect_button_margin_vertical"
+        android:text="@string/lights_list_disconnected_light_reconnect_button_text" />
+</LinearLayout>

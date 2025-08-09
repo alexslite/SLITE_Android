@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:paddingHorizontal="@dimen/horizontal_guideline"
+    android:paddingVertical="@dimen/vertical_guideline">
+
+    <TextView
+        android:id="@+id/titleTV"
+        style="@style/Subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/rationale_dialog_camera_permissions_title" />
+
+    <TextView
+        android:id="@+id/rationaleTV"
+        style="@style/Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/rationale_dialog_description_margin_top"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTV"
+        tools:text="@string/rationale_dialog_camera_permissions_description" />
+
+    <Button
+        android:id="@+id/dismissBtn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/rationale_dialog_buttons_margin_top"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/rationale_dialog_dismiss_button_text"
+        android:textAppearance="@style/Button"
+        android:textColor="@color/button_text_color"
+        app:layout_constraintEnd_toStartOf="@id/openSettingsBtn"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rationaleTV" />
+
+    <Button
+        android:id="@+id/openSettingsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/rationale_dialog_buttons_margin_top"
+        android:text="@string/rationale_dialog_camera_permissions_settings_button_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dismissBtn"
+        app:layout_constraintTop_toBottomOf="@id/rationaleTV" />
+</androidx.constraintlayout.widget.ConstraintLayout>

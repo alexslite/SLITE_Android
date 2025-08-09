@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?colorControlHighlight">
+
+    <item
+        android:id="@android:id/mask"
+        android:bottom="@dimen/light_configuration_effect_radio_button_unselected_stroke_width"
+        android:end="@dimen/light_configuration_effect_radio_button_unselected_stroke_width"
+        android:start="@dimen/light_configuration_effect_radio_button_unselected_stroke_width"
+        android:top="@dimen/light_configuration_effect_radio_button_unselected_stroke_width">
+
+        <shape android:shape="rectangle">
+
+            <size
+                android:height="@dimen/light_configuration_effect_radio_button_height" />
+            <corners android:radius="@dimen/light_configuration_effect_radio_button_corner_radius" />
+            <solid android:color="@color/button_ripple_color" />
+        </shape>
+    </item>
+</ripple>

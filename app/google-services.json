@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "710252913655",
+    "project_id": "slite-497ad",
+    "storage_bucket": "slite-497ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710252913655:android:9d71fc9ad8fdc9a3ad04f2",
+        "android_client_info": {
+          "package_name": "com.sliteptyltd.slite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710252913655-c9bunmm5uris4eb8fie2m4sm982u02p9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA22sP19-FZFmoBJGyBJTYZeUSq-gwUsSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710252913655-c9bunmm5uris4eb8fie2m4sm982u02p9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "710252913655-ijemcmmlmi7ql41vbpi783al4ooq3rt5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tapptitude.slite"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class=".LightItemBinding">
+
+        <variable
+            name="lightDetails"
+            type="com.sliteptyltd.slite.feature.lights.adapter.data.LightsListItem.LightItem" />
+
+        <import type="com.sliteptyltd.slite.data.model.light.LightStatus" />
+    </data>
+
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/lights_list_item_margin_vertical"
+        app:clickToClose="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/editSliteNameBtn"
+                layout="@layout/part_light_swipe_layout_action"
+                android:layout_width="@dimen/light_swipe_action_button_width"
+                android:layout_height="@dimen/light_swipe_action_button_height"
+                android:layout_marginHorizontal="@dimen/light_swipe_first_action_button_margin_horizontal"
+                app:actionIcon="@{@drawable/ic_rename}"
+                app:actionName="@{@string/light_swipe_edit_action_text}"
+                app:backgroundColor="@{@color/light_swipe_edit_action_button_background_color}" />
+
+            <include
+                android:id="@+id/deleteSliteBtn"
+                layout="@layout/part_light_swipe_layout_action"
+                android:layout_width="@dimen/light_swipe_action_button_width"
+                android:layout_height="@dimen/light_swipe_action_button_height"
+                app:actionIcon="@{@drawable/ic_delete}"
+                app:actionName="@{@string/light_swipe_delete_action_text}"
+                app:backgroundColor="@{@color/light_swipe_delete_action_button_background_color}" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lightInfoContainerCL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lights_list_light_item_collapsed_height"
+            android:background="@drawable/bg_light_item"
+            tools:layout_height="@dimen/lights_list_light_item_expanded_height">
+
+            <ImageButton
+                android:id="@+id/lightPowerIV"
+                lightConfiguration="@{lightDetails.lightConfiguration}"
+                lightStatus="@{lightDetails.status}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/light_details_card_power_button_margin_vertical"
+                android:background="@drawable/bg_power_button"
+                android:foreground="@drawable/ripple_lights_power_button"
+                android:src="@drawable/ic_power"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guidelineStart"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/lightNameTV"
+                style="@style/Subtitle"
+                lightName="@{lightDetails.lightConfiguration.name}"
+                lightStatus="@{lightDetails.status}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/light_details_card_title_margin_start"
+                android:layout_marginEnd="@dimen/light_details_card_title_margin_end"
+                android:ellipsize="end"
+                android:lines="1"
+                app:layout_constraintBottom_toTopOf="@id/sliteStatusTV"
+                app:layout_constraintEnd_toStartOf="@id/dropdownContainerFL"
+                app:layout_constraintStart_toEndOf="@id/lightPowerIV"
+                app:layout_constraintTop_toTopOf="@id/lightPowerIV"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Office Really Long Slite Name" />
+
+            <TextView
+                android:id="@+id/sliteStatusTV"
+                style="@style/Info"
+                lightConfiguration="@{lightDetails.lightConfiguration}"
+                singleLightStatus="@{lightDetails.status}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/light_details_card_status_text_color"
+                app:layout_constraintBottom_toBottomOf="@id/lightPowerIV"
+                app:layout_constraintEnd_toEndOf="@id/lightNameTV"
+                app:layout_constraintStart_toStartOf="@id/lightNameTV"
+                app:layout_constraintTop_toBottomOf="@id/lightNameTV"
+                tools:text="Turned on" />
+
+            <FrameLayout
+                android:id="@+id/dropdownContainerFL"
+                isLightDropdownVisible="@{lightDetails.status == LightStatus.ON}"
+                android:layout_width="@dimen/lights_list_light_item_dropdown_container_width"
+                android:layout_height="@dimen/lights_list_light_item_dropdown_container_height"
+                android:clickable="true"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0"
+                tools:ignore="ContentDescription">
+
+                <ImageButton
+                    android:id="@+id/dropdownIV"
+                    android:layout_width="@dimen/lights_list_light_item_dropdown_size"
+                    android:layout_height="@dimen/lights_list_light_item_dropdown_size"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginTop="@dimen/lights_list_light_item_dropdown_margin_top"
+                    android:layout_marginEnd="@dimen/lights_list_light_item_open_menu_button_margin_end"
+                    android:background="@color/transparent"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:src="@drawable/ic_dropdown_caret"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/brightnessValueTV"
+                style="@style/Info"
+                android:layout_width="@dimen/lights_list_light_item_slider_label_width"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                app:layout_constraintBottom_toBottomOf="@id/brightnessSlider"
+                app:layout_constraintStart_toEndOf="@id/guidelineStart"
+                app:layout_constraintTop_toTopOf="@id/brightnessSlider"
+                tools:text="50%" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/brightnessSlider"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lights_list_light_item_slider_margin_top"
+                android:layout_marginEnd="@dimen/lights_list_light_item_slider_margin_end"
+                android:stepSize="1"
+                android:valueFrom="0"
+                android:valueTo="100"
+                app:labelBehavior="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/brightnessValueTV"
+                app:layout_constraintTop_toBottomOf="@id/lightPowerIV"
+                app:thumbRadius="@dimen/light_configuration_slider_thumb_radius"
+                app:trackColorActive="@color/light_configuration_track_active_color"
+                app:trackColorInactive="@color/light_configuration_track_inactive_color"
+                app:trackHeight="@dimen/light_configuration_slider_track_height"
+                tools:value="50" />
+
+            <TextView
+                android:id="@+id/secondaryPropertyValueTV"
+                style="@style/Info"
+                android:layout_width="@dimen/lights_list_light_item_slider_label_width"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/horizontal_guideline"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                app:layout_constraintBottom_toBottomOf="@id/secondaryPropertySlider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/secondaryPropertySlider"
+                tools:text="25%"
+                tools:visibility="gone" />
+
+            <View
+                android:id="@+id/hueGradient"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/light_configuration_slider_track_height"
+                android:layout_marginHorizontal="@dimen/light_configuration_gradient_track_margin_horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/secondaryPropertySlider"
+                app:layout_constraintEnd_toEndOf="@id/secondaryPropertySlider"
+                app:layout_constraintStart_toStartOf="@id/secondaryPropertySlider"
+                app:layout_constraintTop_toTopOf="@id/secondaryPropertySlider" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/secondaryPropertySlider"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/lights_list_light_item_slider_margin_top"
+                app:labelBehavior="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/secondaryPropertyValueTV"
+                app:layout_constraintTop_toBottomOf="@id/brightnessSlider"
+                app:thumbRadius="@dimen/light_configuration_slider_thumb_radius"
+                app:tickColor="@color/light_configuration_tick_color"
+                app:trackColorActive="@color/light_configuration_track_active_color"
+                app:trackColorInactive="@color/light_configuration_track_inactive_color"
+                app:trackHeight="@dimen/light_configuration_slider_track_height"
+                tools:stepSize="1"
+                tools:value="25"
+                tools:valueFrom="0"
+                tools:valueTo="100" />
+
+            <View
+                android:id="@+id/configButtonSeparator"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/lights_list_light_item_separator_height"
+                android:layout_marginTop="@dimen/lights_list_light_item_separator_margin_top"
+                android:background="@color/lights_list_separator_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/secondaryPropertySlider" />
+
+            <Button
+                android:id="@+id/openAdvancedSettingsBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/transparent"
+                android:foreground="@color/transparent"
+                android:gravity="center"
+                android:text="@string/lights_list_advanced_modes_button_text"
+                app:icon="@drawable/ic_advanced_settings"
+                app:iconGravity="textStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/configButtonSeparator" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/lightControlsGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="brightnessSlider, brightnessValueTV, secondaryPropertySlider"
+                tools:visibility="visible" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/advancedOptionsGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="configButtonSeparator, openAdvancedSettingsBtn"
+                tools:visibility="visible" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/horizontal_guideline" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.daimajia.swipe.SwipeLayout>
+</layout>

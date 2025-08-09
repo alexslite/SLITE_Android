@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <padding
+        android:bottom="@dimen/image_color_picker_color_preview_stroke_width"
+        android:left="@dimen/image_color_picker_color_preview_stroke_width"
+        android:right="@dimen/image_color_picker_color_preview_stroke_width"
+        android:top="@dimen/image_color_picker_color_preview_stroke_width" />
+    <size
+        android:width="@dimen/image_color_picker_color_preview_size"
+        android:height="@dimen/image_color_picker_color_preview_size" />
+    <solid android:color="@color/image_color_picker_color_preview_default_color" />
+</shape>

@@ -1,0 +1,16 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?colorControlHighlight">
+
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+
+            <size
+                android:width="@dimen/light_swipe_action_button_width"
+                android:height="@dimen/light_swipe_action_button_height" />
+
+            <corners android:radius="@dimen/lights_list_item_corner_radius" />
+
+            <solid android:color="@color/button_ripple_color" />
+        </shape>
+    </item>
+</ripple>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/light_configuration_effect_item_padding_bottom"
+    tools:background="@color/dark_grey">
+
+    <RadioGroup
+        android:id="@+id/firstEffectsSectionRG"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/light_configuration_effect_radio_buttons_section_margin_horizontal">
+
+        <RadioButton
+            android:id="@+id/fireworksRB"
+            style="@style/EffectRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/light_configuration_effect_radio_button_height"
+            android:paddingHorizontal="@dimen/light_configuration_effect_radio_button_padding"
+            android:text="@string/light_configuration_fireworks_effect_name" />
+
+        <RadioButton
+            android:id="@+id/lightningRB"
+            style="@style/EffectRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/light_configuration_effect_radio_button_height"
+            android:layout_marginTop="@dimen/light_configuration_effect_radio_button_margin_top"
+            android:paddingHorizontal="@dimen/light_configuration_effect_radio_button_padding"
+            android:text="@string/light_configuration_lightning_effect_name" />
+
+        <RadioButton
+            android:id="@+id/discoRB"
+            style="@style/EffectRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/light_configuration_effect_radio_button_height"
+            android:layout_marginTop="@dimen/light_configuration_effect_radio_button_margin_top"
+            android:paddingHorizontal="@dimen/light_configuration_effect_radio_button_padding"
+            android:text="@string/light_configuration_disco_effect_name" />
+
+        <RadioButton
+            android:id="@+id/fireRB"
+            style="@style/EffectRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/light_configuration_effect_radio_button_height"
+            android:layout_marginTop="@dimen/light_configuration_effect_radio_button_margin_top"
+            android:paddingHorizontal="@dimen/light_configuration_effect_radio_button_padding"
+            android:text="@string/light_configuration_fire_effect_name"
+            tools:checked="true" />
+
+        <RadioButton
+            android:id="@+id/strobeRB"
+            style="@style/EffectRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/light_configuration_effect_radio_button_height"
+            android:layout_marginTop="@dimen/light_configuration_effect_radio_button_margin_top"
+            android:paddingHorizontal="@dimen/light_configuration_effect_radio_button_padding"
+            android:text="@string/light_configuration_strobe_effect_name" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/secondEffectsSectionRG"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:layout_marginStart="@dimen/light_configuration_effect_radio_buttons_section_margin_horizontal">
+
+        <RadioButton
+            android:id="@+id/paparazziRB"
+            style="@style/EffectRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/light_configuration_effect_radio_button_height"
+            android:paddingHorizontal="@dimen/light_configuration_effect_radio_button_padding"
+            android:text="@string/light_configuration_paparazzi_effect_name" />
+
+        <RadioButton
+            android:id="@+id/policeRB"
+            style="@style/EffectRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/light_configuration_effect_radio_button_height"
+            android:layout_marginTop="@dimen/light_configuration_effect_radio_button_margin_top"
+            android:paddingHorizontal="@dimen/light_configuration_effect_radio_button_padding"
+            android:text="@string/light_configuration_police_effect_name" />
+
+        <RadioButton
+            android:id="@+id/faultyGlobeRB"
+            style="@style/EffectRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/light_configuration_effect_radio_button_height"
+            android:layout_marginTop="@dimen/light_configuration_effect_radio_button_margin_top"
+            android:paddingHorizontal="@dimen/light_configuration_effect_radio_button_padding"
+            android:text="@string/light_configuration_faulty_globe_effect_name" />
+
+        <RadioButton
+            android:id="@+id/pulsingRB"
+            style="@style/EffectRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/light_configuration_effect_radio_button_height"
+            android:layout_marginTop="@dimen/light_configuration_effect_radio_button_margin_top"
+            android:paddingHorizontal="@dimen/light_configuration_effect_radio_button_padding"
+            android:text="@string/light_configuration_pulsing_effect_name" />
+
+        <RadioButton
+            android:id="@+id/tvRB"
+            style="@style/EffectRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/light_configuration_effect_radio_button_height"
+            android:layout_marginTop="@dimen/light_configuration_effect_radio_button_margin_top"
+            android:paddingHorizontal="@dimen/light_configuration_effect_radio_button_padding"
+            android:text="@string/light_configuration_tv_effect_name" />
+    </RadioGroup>
+</LinearLayout>

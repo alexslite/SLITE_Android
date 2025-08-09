@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_navigation_bar_height"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <Button
+        android:id="@+id/whiteConfigBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/bottom_navigation_configuration_selected_tab_indicator_size"
+        android:background="@color/transparent"
+        android:drawablePadding="0dp"
+        android:gravity="center"
+        android:text="@string/light_configuration_white_option_title"
+        android:textAppearance="@style/Info"
+        android:textColor="@color/bottom_navigation_selected_item_tint"
+        app:icon="@drawable/ic_white_navigation"
+        app:iconGravity="textTop"
+        app:iconTint="@color/bottom_navigation_selected_item_tint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/colorConfigBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/colorConfigBtn"
+        style="@style/Info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/bottom_navigation_configuration_selected_tab_indicator_size"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:text="@string/light_configuration_colors_option_title"
+        app:icon="@drawable/ic_color_navigation"
+        app:iconGravity="textTop"
+        app:iconTint="@color/bottom_navigation_unselected_item_tint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/effectsConfigBtn"
+        app:layout_constraintStart_toEndOf="@id/whiteConfigBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/effectsConfigBtn"
+        style="@style/Info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/bottom_navigation_configuration_selected_tab_indicator_size"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:text="@string/light_configuration_effects_option_title"
+        app:icon="@drawable/ic_effects_navigation"
+        app:iconGravity="textTop"
+        app:iconTint="@color/bottom_navigation_unselected_item_tint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/colorConfigBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/selectedConfigurationIndicatorIV"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/bottom_navigation_configuration_selected_tab_indicator_size"
+        android:scaleType="center"
+        android:src="@drawable/ic_selected_bottom_navigation_tab_indicator"
+        app:layout_constraintEnd_toEndOf="@id/whiteConfigBtn"
+        app:layout_constraintStart_toStartOf="@id/whiteConfigBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+</merge>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+
+            <corners android:radius="@dimen/light_configuration_effect_radio_button_corner_radius" />
+            <size
+                android:height="@dimen/light_configuration_effect_radio_button_height" />
+            <solid android:color="@color/light_configuration_effect_radio_button_selected_background_color" />
+        </shape>
+    </item>
+
+    <item
+        android:width="@dimen/light_configuration_effect_radio_button_checked_icon_size"
+        android:height="@dimen/light_configuration_effect_radio_button_checked_icon_size"
+        android:drawable="@drawable/ic_checkmark"
+        android:end="@dimen/light_configuration_effect_radio_button_padding"
+        android:gravity="end"
+        android:top="@dimen/light_configuration_effect_radio_button_padding" />
+</layer-list>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/cameraPreview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@tools:sample/backgrounds/scenic[7]" />
+
+    <ImageView
+        android:id="@+id/selectedImageIV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@tools:sample/backgrounds/scenic[7]"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/closeBtn"
+        style="?actionButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close_filled"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:layout_marginTop="@dimen/spacing_zeta" />
+
+    <LinearLayout
+        android:id="@+id/targetedColorIndicatorContainerLL"
+        android:layout_width="@dimen/image_color_picker_color_preview_container_width"
+        android:layout_height="@dimen/image_color_picker_color_preview_container_height"
+        android:layout_marginBottom="@dimen/image_color_picker_color_preview_container_margin_bottom"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/colorPreviewIV"
+            android:layout_width="@dimen/image_color_picker_color_preview_size"
+            android:layout_height="@dimen/image_color_picker_color_preview_size"
+            android:layout_marginBottom="@dimen/image_color_picker_color_preview_margin_bottom"
+            android:foreground="@drawable/bg_cross_hair_color_preview_stroke"
+            android:src="@drawable/bg_cross_hair_color_preview"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/pixelCrossHairIV"
+            android:layout_width="@dimen/image_color_picker_crosshair_size"
+            android:layout_height="@dimen/image_color_picker_crosshair_size"
+            android:src="@drawable/ic_picker"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/missingImageInformationalTV"
+        style="@style/Body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/image_color_picker_informational_text_margin_horizontal"
+        android:drawablePadding="@dimen/image_color_picker_informational_drawable_padding"
+        android:gravity="center"
+        android:visibility="gone"
+        app:drawableTopCompat="@drawable/ic_sad_face"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Slite unfortunately does not have access to the camera. Access can be changed in Settings" />
+
+    <ImageButton
+        android:id="@+id/switchToCameraBtn"
+        style="?actionButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/image_color_picker_camera_button_margin_bottom"
+        android:src="@drawable/ic_camera_filled"
+        app:layout_constraintBottom_toTopOf="@id/openGalleryBtn"
+        app:layout_constraintEnd_toEndOf="@id/openGalleryBtn"
+        app:layout_constraintStart_toStartOf="@id/openGalleryBtn"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/openGalleryBtn"
+        style="?actionButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_gallery_filled"
+        app:layout_constraintBottom_toTopOf="@id/guidelineBottom"
+        app:layout_constraintStart_toEndOf="@id/guidelineStart"
+        tools:ignore="ContentDescription" />
+
+    <com.sliteptyltd.slite.views.ProgressButton
+        android:id="@+id/confirmColorBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/image_color_picker_confirm_button_margin_horizontal"
+        android:backgroundTint="@color/bg_pick_color_button_color_states"
+        android:text="@string/image_color_picker_pick_color_button_text"
+        android:textColor="@color/image_color_picker_pick_button_text_color"
+        app:layout_constraintBottom_toBottomOf="@id/openGalleryBtn"
+        app:layout_constraintEnd_toStartOf="@id/revertPickBtn"
+        app:layout_constraintStart_toEndOf="@id/openGalleryBtn"
+        app:layout_constraintTop_toTopOf="@id/openGalleryBtn" />
+
+    <ImageButton
+        android:id="@+id/revertPickBtn"
+        style="?actionButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_revert"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/guidelineBottom"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/image_color_picker_guidelines_horizontal_distance" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/image_color_picker_guidelines_horizontal_distance" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/image_color_picker_guideline_vertical_distance" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_graph"
+    app:startDestination="@id/lights_graph">
+
+    <action
+        android:id="@+id/toLightsGraph"
+        app:destination="@id/lights_graph"
+        app:enterAnim="@anim/enter_from_left"
+        app:exitAnim="@anim/exit_to_right"
+        app:launchSingleTop="true"
+        app:popUpToSaveState="true"
+        app:restoreState="true" />
+
+    <action
+        android:id="@+id/toScenesGraph"
+        app:destination="@id/scenes_graph"
+        app:launchSingleTop="true"
+        app:enterAnim="@anim/enter_from_right"
+        app:exitAnim="@anim/exit_to_left"
+        app:popUpToSaveState="true"
+        app:restoreState="true" />
+
+    <include app:graph="@navigation/lights_graph" />
+
+    <include app:graph="@navigation/scenes_graph" />
+
+    <include app:graph="@navigation/missing_capabilities_graph" />
+
+    <action
+        android:id="@+id/action_global_to_missingCapabilitiesFragment"
+        app:destination="@id/missing_capabilities_graph" />
+</navigation>

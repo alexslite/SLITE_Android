@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="dark_grey">#1D1D1D</color>
+    <color name="grey">#707070</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#EF4340</color>
+    <color name="orange">#FF835D</color>
+    <color name="green">#004C53</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="system_bars_default_color">@color/transparent</color>
+
+    <color name="text_color">@color/white</color>
+
+    <color name="button_background_color">#EF4340</color>
+    <color name="button_disabled_background_color">#80EF4340</color>
+    <color name="button_secondary_background_color">#000000</color>
+    <color name="button_secondary_disabled_background_color">#80000000</color>
+    <color name="button_ripple_color">@color/white</color>
+    <color name="button_text_color">@color/white</color>
+    <color name="progress_button_indicator_color">@color/white</color>
+
+    <color name="dialog_overlay_background">#B2000000</color>
+    <color name="bottom_sheet_dialog_dragable_area_color">@color/grey</color>
+    <color name="dialog_background_color">@color/dark_grey</color>
+
+    <color name="edit_text_error_color">@color/red</color>
+    <color name="edit_text_cursor_color">@color/red</color>
+    <color name="edit_text_hint_color">@color/grey</color>
+
+    <color name="input_layout_box_stroke_color">@color/grey</color>
+
+    <!-- region Onboarding -->
+    <color name="onboarding_page_indicator_color">@color/white</color>
+    <color name="onboarding_next_button_icon_color">@color/white</color>
+    <color name="onboarding_first_page_preview_tint">@color/black</color>
+    <color name="onboarding_second_page_preview_tint">@color/red</color>
+
+    <!-- region Bottom Navigation -->
+    <color name="bottom_navigation_bar_background">@color/black</color>
+    <color name="bottom_navigation_selected_item_tint">@color/red</color>
+    <color name="bottom_navigation_unselected_item_tint">@color/white</color>
+
+    <!-- region State Layout -->
+    <color name="state_layout_text_color">@color/grey</color>
+
+    <!-- region Lights -->
+    <color name="lights_add_tutorial_button_stroke_color">@color/red</color>
+
+    <!-- region Add Component Dropdown -->
+    <color name="add_component_dropdown_background_color">@color/red</color>
+    <color name="add_component_dropdown_light_background_color">@color/add_component_dropdown_background_color</color>
+    <color name="add_component_dropdown_group_background_color">@color/orange</color>
+    <color name="add_component_dropdown_scene_background_color">@color/green</color>
+
+    <!-- region Add Light -->
+    <color name="add_light_available_slite_item_background">@color/dark_grey</color>
+
+    <!-- region Name Slite -->
+    <color name="name_slite_restrictions_text_color">@color/grey</color>
+
+    <!-- region Lights List -->
+    <color name="light_details_card_status_text_color">@color/grey</color>
+    <color name="lights_list_light_item_background_color">@color/dark_grey</color>
+    <color name="lights_list_light_on_item_title_text_color">@color/text_color</color>
+    <color name="lights_list_light_off_item_title_text_color">@color/grey</color>
+    <color name="lights_list_light_power_button_off_tint">@color/grey</color>
+    <color name="lights_list_light_power_button_disconnected_tint">@color/black</color>
+    <color name="lights_list_section_header_text_color">@color/grey</color>
+    <color name="lights_list_default_light_color">#FDF4DC</color>
+    <color name="lights_list_section_control_power_button_on_color">@color/red</color>
+    <color name="lights_list_section_control_power_button_off_color">@color/grey</color>
+    <color name="lights_list_separator_color">@color/black</color>
+
+    <!-- region Light Swipe Actions -->
+    <color name="light_swipe_edit_action_button_background_color">@color/green</color>
+    <color name="light_swipe_delete_action_button_background_color">@color/red</color>
+
+    <!-- region Light Configuration -->
+    <color name="light_configuration_details_card_background_color">@color/black</color>
+    <color name="light_configuration_preset_radio_button_background">@color/black</color>
+    <color name="light_configuration_thumb_background">@color/dark_grey</color>
+    <color name="light_configuration_thumb_stroke_color">@color/white</color>
+    <color name="light_configuration_track_inactive_color">@color/black</color>
+    <color name="light_configuration_track_active_color">@color/white</color>
+    <color name="light_configuration_tick_color">@color/transparent</color>
+    <color name="light_configuration_saturation_track_active_color">@color/transparent</color>
+    <color name="light_configuration_hue_track_color">@color/transparent</color>
+    <color name="light_configuration_effect_radio_button_selected_background_color">@color/black</color>
+    <color name="light_configuration_effect_radio_button_unselected_background_color">@color/dark_grey</color>
+    <color name="light_configuration_effect_radio_button_unselected_stroke_color">@color/black</color>
+
+    <!-- region Image Color Picker -->
+    <color name="image_color_picker_color_preview_stroke_color">@color/white</color>
+    <color name="image_color_picker_color_preview_default_color">@color/white</color>
+    <color name="image_color_picker_pick_button_color">@color/white</color>
+    <color name="image_color_picker_pick_disabled_button_color">#80FFFFFF</color>
+    <color name="image_color_picker_pick_button_text_color">@color/black</color>
+
+    <!-- region Create Group -->
+    <color name="create_group_light_item_background">@color/dark_grey</color>
+
+    <!-- region Scenes -->
+    <color name="scenes_list_item_power_button_background_tint">@color/black</color>
+    <color name="scenes_list_item_power_button_icon_tint">@color/white</color>
+    <color name="scenes_list_item_default_background_gradient_start_color">@color/green</color>
+    <color name="scenes_list_item_default_background_gradient_end_color">@color/red</color>
+    <color name="scenes_list_item_overlay_gradient_start">#00000000</color>
+    <color name="scenes_list_item_overlay_gradient_end">#80000000</color>
+
+    <!-- region Announcement -->
+    <color name="announcement_warning_text_color">@color/black</color>
+    <color name="announcement_success_text_color">@color/white</color>
+    <color name="announcement_warning_background_color">@color/orange</color>
+    <color name="announcement_success_background_color">@color/green</color>
+</resources>

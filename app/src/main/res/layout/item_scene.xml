@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class=".SceneItemBinding">
+
+        <variable
+            name="sceneListItem"
+            type="com.sliteptyltd.slite.feature.scenes.adapter.SceneListItem" />
+    </data>
+
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/sceneSwipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/scenes_list_item_margin_vertical"
+        app:clickToClose="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/editSceneNameBtn"
+                layout="@layout/part_light_swipe_layout_action"
+                android:layout_width="@dimen/light_swipe_action_button_width"
+                android:layout_height="@dimen/light_swipe_action_button_height"
+                android:layout_marginHorizontal="@dimen/light_swipe_first_action_button_margin_horizontal"
+                app:actionIcon="@{@drawable/ic_rename}"
+                app:actionName="@{@string/light_swipe_edit_action_text}"
+                app:backgroundColor="@{@color/light_swipe_edit_action_button_background_color}" />
+
+            <include
+                android:id="@+id/deleteSceneBtn"
+                layout="@layout/part_light_swipe_layout_action"
+                android:layout_width="@dimen/light_swipe_action_button_width"
+                android:layout_height="@dimen/light_swipe_action_button_height"
+                app:actionIcon="@{@drawable/ic_delete}"
+                app:actionName="@{@string/light_swipe_delete_action_text}"
+                app:backgroundColor="@{@color/light_swipe_delete_action_button_background_color}" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sceneInfoContainerCL"
+            sceneBackgroundGradientColors="@{sceneListItem.colors}"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scenes_list_item_height"
+            tools:background="@drawable/bg_default_scene_gradient">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_scene_gradient_overlay"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/scenePowerIB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/scenes_list_item_power_button_margin_vertical"
+                android:layout_marginStart="@dimen/horizontal_guideline"
+                android:background="@drawable/bg_power_button"
+                android:backgroundTint="@color/scenes_list_item_power_button_background_tint"
+                android:foreground="@drawable/ripple_lights_power_button"
+                android:src="@drawable/ic_power"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/scenes_list_item_power_button_icon_tint"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:id="@+id/applySceneFeedbackIndicatorV"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_scene_applied"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lightNameTV"
+                style="@style/Subtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/scenes_list_item_title_margin_start"
+                android:layout_marginEnd="@dimen/scenes_list_item_title_margin_end"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@{sceneListItem.name}"
+                app:layout_constraintBottom_toBottomOf="@id/scenePowerIB"
+                app:layout_constraintEnd_toStartOf="@id/optionsIB"
+                app:layout_constraintStart_toEndOf="@id/scenePowerIB"
+                app:layout_constraintTop_toTopOf="@id/scenePowerIB"
+                tools:text="Office" />
+
+            <ImageButton
+                android:id="@+id/optionsIB"
+                style="?actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/scenes_list_item_open_menu_button_margin_end"
+                android:src="@drawable/ic_options"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.daimajia.swipe.SwipeLayout>
+</layout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SliteTextAppearance">
+        <item name="fontFamily">@font/helvetica_neue_normal</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Title" parent="SliteTextAppearance">
+        <item name="fontFamily">@font/helvetica_neue_bold</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="lineHeight">@dimen/title_line_height</item>
+    </style>
+
+    <style name="Subtitle" parent="SliteTextAppearance">
+        <item name="fontFamily">@font/helvetica_neue_bold</item>
+        <item name="android:textSize">@dimen/subtitle_text_size</item>
+        <item name="lineHeight">@dimen/subtitle_line_height</item>
+    </style>
+
+    <style name="Button" parent="SliteTextAppearance">
+        <item name="fontFamily">@font/helvetica_neue_medium</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="lineHeight">@dimen/button_line_height</item>
+    </style>
+
+    <style name="Body" parent="SliteTextAppearance">
+        <item name="android:textSize">@dimen/body_text_size</item>
+        <item name="lineHeight">@dimen/body_line_height</item>
+    </style>
+
+    <style name="Info" parent="SliteTextAppearance">
+        <item name="android:textSize">@dimen/info_text_size</item>
+        <item name="lineHeight">@dimen/info_line_height</item>
+    </style>
+
+    <style name="BottomNavigationLabelTextStyle" parent="SliteTextAppearance">
+        <item name="android:textSize">@dimen/bottom_navigation_label_text_size</item>
+        <item name="lineHeight">11.93dp</item>
+    </style>
+
+    <style name="SlitePrimaryButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/bg_button_color_states</item>
+        <item name="android:textColor">@color/button_text_color</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:outlineProvider">none</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="fontFamily">@font/helvetica_neue_normal</item>
+        <item name="fontWeight">500</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="lineHeight">22dp</item>
+    </style>
+
+    <style name="SliteSecondaryButton" parent="SlitePrimaryButton">
+        <item name="backgroundTint">@color/bg_secondary_button_color_states</item>
+    </style>
+
+    <style name="FullScreenDialog" parent="Theme.Slite">
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="colorPrimary">?colorPrimary</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/dialog_overlay_background</item>
+    </style>
+
+    <style name="FullScreenDialog.Animation">
+        <item name="android:windowEnterAnimation">@anim/fullscreen_dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/fullscreen_dialog_exit_anim</item>
+    </style>
+
+    <style name="SliteTextInputLayoutTheme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:minHeight">@dimen/input_layout_min_height</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/input_layout_corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/input_layout_corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/input_layout_corner_radius</item>
+        <item name="boxCornerRadiusTopStart">@dimen/input_layout_corner_radius</item>
+        <item name="boxStrokeErrorColor">@color/edit_text_error_color</item>
+        <item name="boxStrokeColor">@color/bg_outlined_input_field_stroke_color</item>
+        <item name="boxStrokeWidth">@dimen/input_layout_box_stroke_width</item>
+        <item name="boxStrokeWidthFocused">@dimen/input_layout_box_stroke_width</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="errorTextColor">@color/edit_text_error_color</item>
+        <item name="colorControlActivated">@color/edit_text_cursor_color</item>
+    </style>
+
+    <style name="RoundedBottomSheetDialog" parent="@style/Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/bottom_navigation_bar_background</item>
+        <item name="bottomSheetStyle">@style/RoundedBottomSheet</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="RoundedBottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_rounded_corners_bottom_sheet_dialog</item>
+    </style>
+
+    <style name="RoundedBottomSheetDialogTheme" parent="RoundedBottomSheetDialog" />
+
+    <style name="LightPresetRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:background">@drawable/bg_light_preset_radio_button</item>
+        <item name="android:foreground">@drawable/ripple_light_preset_radio_button</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAppearance">@style/Info</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="EffectRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:background">@drawable/bg_effects_radio_button</item>
+        <item name="android:foreground">@drawable/ripple_radio_button</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAppearance">@style/Subtitle</item>
+    </style>
+</resources>

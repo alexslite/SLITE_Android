@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/onboardingPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/bg_onboarding_first_page" />
+
+    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+        android:id="@+id/pageIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:dotsColor="@color/onboarding_page_indicator_color"
+        app:dotsSize="@dimen/onboarding_page_dot_indicator_size"
+        app:dotsSpacing="@dimen/onboarding_page_dot_indicator_spacing"
+        app:dotsStrokeWidth="@dimen/onboarding_page_dot_indicator_stroke_width"
+        app:layout_constraintBottom_toBottomOf="@id/beginBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/beginBtn"
+        app:stiffness="500" />
+
+    <Button
+        android:id="@+id/beginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_guideline"
+        android:layout_marginTop="@dimen/onboarding_page_finish_button_margin_top"
+        android:layout_marginBottom="@dimen/onboarding_page_finish_button_margin_bottom"
+        android:text="@string/onboarding_button_text"
+        android:textAllCaps="false"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/nextBtn"
+        style="?actionButtonStyle"
+        android:layout_width="@dimen/onboarding_page_next_button_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_onboarding_next_button"
+        android:backgroundTint="@color/onboarding_first_page_preview_tint"
+        android:foreground="@drawable/ripple_onboarding_next_button"
+        android:src="@drawable/ic_caret_right"
+        app:layout_constraintBottom_toBottomOf="@id/beginBtn"
+        app:layout_constraintEnd_toStartOf="@id/nextPagePreviewV"
+        app:layout_constraintTop_toTopOf="@id/beginBtn"
+        app:tint="@color/onboarding_next_button_icon_color"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/nextPagePreviewV"
+        android:layout_width="@dimen/onboarding_page_next_preview_width"
+        android:layout_height="0dp"
+        android:background="@color/onboarding_first_page_preview_tint"
+        android:elevation="@dimen/onboarding_page_next_preview_elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

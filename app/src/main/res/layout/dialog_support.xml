@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corners_bottom_sheet_dialog"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/horizontal_guideline">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_sheet_dialog_dragable_area_margin_top"
+        android:src="@drawable/ic_dialog_dragable_area_indicator"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        style="@style/Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/support_dialog_title_margin_top"
+        android:layout_marginBottom="@dimen/support_dialog_title_margin_bottom"
+        android:text="@string/support_dialog_title" />
+
+    <TextView
+        android:id="@+id/privacyPolicyTV"
+        style="@style/Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="@string/support_dialog_privacy_policy" />
+
+    <TextView
+        android:id="@+id/termsOfUseTV"
+        style="@style/Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/support_dialog_text_margin_top"
+        tools:text="@string/support_dialog_terms_of_use" />
+
+    <TextView
+        android:id="@+id/contactTV"
+        style="@style/Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/support_dialog_text_margin_top"
+        tools:text="@string/support_dialog_contact" />
+
+    <TextView
+        android:id="@+id/updateAvailableTV"
+        style="@style/Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/support_dialog_text_margin_top"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        tools:text="@string/support_dialog_update"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/appVersionTV"
+        style="@style/Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/support_dialog_app_version_margin_top"
+        android:textColor="@color/grey"
+        tools:text="App Version: 1.1.0" />
+
+    <ImageView
+        android:layout_width="@dimen/support_dialog_app_icon_width"
+        android:layout_height="@dimen/support_dialog_app_icon_height"
+        android:layout_marginTop="@dimen/support_dialog_app_icon_margin_top"
+        android:layout_marginBottom="@dimen/support_dialog_app_icon_margin_bottom"
+        android:src="@drawable/ic_slite_logo"
+        tools:ignore="ContentDescription" />
+</LinearLayout>

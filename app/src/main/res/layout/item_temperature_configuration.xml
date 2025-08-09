@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/vertical_guideline"
+    tools:background="@color/dark_grey">
+
+    <ImageView
+        android:id="@+id/temperatureIconIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_temperature"
+        app:layout_constraintBottom_toBottomOf="@id/temperatureLabelTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/temperatureValueTV"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/temperatureValueTV"
+        style="@style/Subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/light_configuration_value_label_margin_start"
+        android:layout_marginEnd="@dimen/horizontal_guideline"
+        android:ellipsize="end"
+        android:lines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/temperatureIconIV"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="3500 K" />
+
+    <TextView
+        android:id="@+id/temperatureLabelTV"
+        style="@style/Info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/light_configuration_preset_radio_button_margin_end"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/light_configuration_temperature_label_text"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="@id/temperatureValueTV"
+        app:layout_constraintStart_toStartOf="@id/temperatureValueTV"
+        app:layout_constraintTop_toBottomOf="@id/temperatureValueTV" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/temperatureSlider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/light_configuration_temperature_slider_margin_horizontal"
+        android:layout_marginTop="@dimen/light_configuration_slider_margin"
+        android:stepSize="100"
+        android:valueFrom="2500"
+        android:valueTo="10000"
+        app:labelBehavior="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/temperatureLabelTV"
+        app:thumbRadius="@dimen/light_configuration_slider_thumb_radius"
+        app:trackColorActive="@color/light_configuration_track_active_color"
+        app:trackColorInactive="@color/light_configuration_track_inactive_color"
+        app:trackHeight="@dimen/light_configuration_slider_track_height"
+        tools:value="3500" />
+
+    <RadioGroup
+        android:id="@+id/temperaturePresetsRG"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_guideline"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/temperatureSlider">
+
+        <RadioButton
+            android:id="@+id/tungstenTemperatureOptionRB"
+            style="@style/LightPresetRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/light_configuration_preset_radio_button_height"
+            android:layout_marginEnd="@dimen/light_configuration_preset_radio_button_margin_end"
+            android:layout_weight="1"
+            android:text="@string/light_configuration_temperature_tungsten_preset_text" />
+
+        <RadioButton
+            android:id="@+id/daylightTemperatureOptionRB"
+            style="@style/LightPresetRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/light_configuration_preset_radio_button_height"
+            android:layout_marginEnd="@dimen/light_configuration_preset_radio_button_margin_end"
+            android:layout_weight="1"
+            android:text="@string/light_configuration_temperature_daylight_preset_text" />
+
+        <RadioButton
+            android:id="@+id/coolWhiteTemperatureOptionRB"
+            style="@style/LightPresetRadioButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/light_configuration_preset_radio_button_height"
+            android:layout_marginEnd="@dimen/light_configuration_preset_radio_button_margin_end"
+            android:layout_weight="1"
+            android:text="@string/light_configuration_temperature_cool_white_preset_text" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

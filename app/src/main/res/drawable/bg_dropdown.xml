@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:centerX="-10.0"
+        android:centerY="0.75"
+        android:endColor="@color/add_component_dropdown_background_color"
+        android:startColor="@color/add_component_dropdown_scene_background_color"
+        android:type="sweep" />
+</shape>

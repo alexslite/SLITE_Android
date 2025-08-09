@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/instructionAddLightBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/ic_tutorial_add_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:layout_marginEnd="60dp" />
+
+    <TextView
+        android:id="@+id/instructionTV"
+        style="@style/Subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_guideline"
+        android:text="@string/lights_add_tutorial_instructions"
+        app:layout_constraintEnd_toStartOf="@id/buttonIndicatorIV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/instructionAddLightBtn" />
+
+    <ImageView
+        android:id="@+id/buttonIndicatorIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/lights_add_tutorial_arrow_margin_end"
+        android:src="@drawable/ic_tutorial_indicator_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/instructionTV"
+        app:layout_constraintEnd_toEndOf="@id/instructionAddLightBtn"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@id/instructionAddLightBtn"
+        app:layout_constraintTop_toBottomOf="@id/instructionAddLightBtn"
+        tools:ignore="ContentDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>

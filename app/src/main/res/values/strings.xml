@@ -1,0 +1,193 @@
+<resources>
+    <string name="app_name">Slite</string>
+
+    <!-- region Onboarding -->
+    <string name="onboarding_first_page_title">Welcome to Slite.</string>
+    <string name="onboarding_first_page_description">Let’s take your creativity to the next level!</string>
+    <string name="onboarding_second_page_title">Bring your Slite to life</string>
+    <string name="onboarding_second_page_description">Control your Slite’s color, brightness, saturation and plenty more.</string>
+    <string name="onboarding_third_page_title">Scenes, Groups &amp; Effects</string>
+    <string name="onboarding_third_page_description">Create your own ‘Scene’ or ‘Group’ with multiple lights, or pump up the fun with playful effects!</string>
+    <string name="onboarding_button_text">Let there be light!</string>
+
+    <!-- region Bottom Navigation -->
+    <string name="bottom_navigation_lights_menu_option_title">@string/lights_screen_title</string>
+    <string name="bottom_navigation_scenes_menu_option_title">@string/scenes_screen_title</string>
+
+    <!-- region Lights -->
+    <string name="lights_screen_title">Lights</string>
+    <string name="lights_empty_state_title">No lights added</string>
+    <string name="lights_empty_state_subtitle">Tap on + to add new lights or create\ngroups of lights and get started</string>
+    <string name="lights_add_tutorial_instructions">Tap here to connect your first Slite</string>
+
+    <!-- region Scenes -->
+    <string name="scenes_screen_title">Scenes</string>
+    <string name="scenes_empty_state_title">No scene saved</string>
+    <string name="scenes_empty_state_subtitle">Adjust your preferred light or group,\nthen tap on the + to save scene.</string>
+    <string name="scenes_create_dialog_title">Save Scene</string>
+    <string name="scenes_create_dialog_description">You are about to create a scene which uses the settings of your active lights. This is a setting you can use later on via the Scenes section</string>
+    <string name="scenes_create_dialog_button_text">Save</string>
+    <string name="scenes_creation_requirements_dialog_title">Unable To Save Scene</string>
+    <string name="scenes_creation_requirements_dialog_description">To create a scene you need to have at least one light or group turned ON.</string>
+    <string name="scenes_creation_requirements_dialog_button_text">OK</string>
+    <string name="scenes_rename_dialog_title">Rename scene</string>
+    <string name="scenes_rename_dialog_button_text">Done</string>
+    <string name="scenes_remove_dialog_title">Remove Scene?</string>
+    <string name="scenes_remove_dialog_description">Are you sure you want to remove %s from your list of scenes?</string>
+    <string name="scenes_remove_confirmation_button_text">Remove</string>
+    <string name="scenes_creation_success_message">Your scene was successfully created</string>
+
+    <!-- region Add Component Dropdown -->
+    <string name="add_component_dropdown_light_button_text">Add Light</string>
+    <string name="add_component_dropdown_group_button_text">Create Group</string>
+    <string name="add_component_dropdown_scene_button_text">Save Scene</string>
+
+    <!-- region Add Light -->
+    <string name="add_light_title">Add Light</string>
+    <string name="add_light_bluetooth_searching_description">Searching for your Slite</string>
+    <string name="add_light_bluetooth_searching_error_text">We couldn’t find any Slite</string>
+    <string name="add_light_bluetooth_searching_error_retry_button_text">Try again</string>
+    <string name="add_light_start_bluetooth_dialog_title">Bluetooth Availability</string>
+    <string name="add_light_start_bluetooth_dialog_description">App requires Bluetooth capabilities to be turned on in order to find nearby Slite devices.</string>
+    <string name="add_light_start_location_dialog_title">Location Availability</string>
+    <string name="add_light_start_location_dialog_description">App requires Location capabilities to be turned on in order to find nearby Slite devices.</string>
+
+    <!-- region Name Slite -->
+    <string name="name_slite_title">Name your Slite</string>
+    <string name="name_slite_input_hint">Name</string>
+    <string name="name_slite_input_restrictions">Name can be 15 characters max.</string>
+    <string name="name_slite_confirm_button_text">Done</string>
+
+    <!-- region Setting Up Slite -->
+    <string name="setting_up_slite_loading_text">Setting up your Slite</string>
+    <string name="setting_up_slite_done_text">Done!</string>
+    <string name="setting_up_slite_error_text">Failed to setup device %s</string>
+
+    <!-- region Lights List -->
+    <string name="lights_list_light_item_status_on_text">Turned on</string>
+    <string name="lights_list_light_item_status_off_text">Turned off</string>
+    <string name="lights_list_group_connected_lights_status_on_text">%1$d of %2$d Turned on</string>
+    <string name="lights_list_group_connected_lights_status_off_text">%d Turned off</string>
+    <string name="lights_list_group_status_disconnected_text">%d Disconnected</string>
+    <string name="lights_list_light_item_status_disconnected_text">Disconnected</string>
+    <string name="lights_list_section_individual_header_text_format">Individual (%d)</string>
+    <string name="lights_list_section_group_header_text_format">Groups (%d)</string>
+    <string name="lights_list_section_control_power_button_on_text">Turn\nOn All</string>
+    <string name="lights_list_section_control_power_button_off_text">Turn\nOff All</string>
+    <string name="lights_list_disconnected_light_info_dialog_title">Connection issues</string>
+    <string name="lights_list_disconnected_light_info_description">• Check power source\n• Check Bluetooth connection\n• Check for physical damage</string>
+    <string name="lights_list_disconnected_light_reconnect_button_text">Reconnect</string>
+    <string name="lights_list_advanced_modes_button_text">Settings</string>
+
+    <!-- region Light Swipe Actions -->
+    <string name="light_swipe_edit_action_text">Rename</string>
+    <string name="light_swipe_delete_action_text">Delete</string>
+
+    <!-- region Delete Light -->
+    <string name="delete_light_dialog_individual_light_title">Remove Light?</string>
+    <string name="delete_light_dialog_group_title">Ungroup Lights?</string>
+    <string name="delete_light_dialog_description_individual_light_format">Are you sure you want to remove “%s”\nfrom your list?</string>
+    <string name="delete_light_dialog_description_group_format">Are you sure you want to ungroup lights from “%s”?</string>
+    <string name="delete_light_dialog_containing_scenes_warning">\nDoing this will delete the following scenes:</string>
+    <string name="delete_light_individual_confirm_button_text">Remove</string>
+    <string name="delete_light_group_confirm_button_text">Ungroup</string>
+    <string name="delete_light_cancel_button_text">Cancel</string>
+    <string name="delete_light_dialog_containing_scene_name_format">• %s</string>
+
+    <!-- region Light Configuration -->
+    <string name="light_configuration_white_option_title">White</string>
+    <string name="light_configuration_colors_option_title">Colors</string>
+    <string name="light_configuration_effects_option_title">Effects</string>
+    <string name="light_configuration_brightness_label_text">Brightness</string>
+    <string name="light_configuration_temperature_label_text">Temperature</string>
+    <string name="light_configuration_temperature_tungsten_preset_text">Tungsten</string>
+    <string name="light_configuration_temperature_daylight_preset_text">Daylight</string>
+    <string name="light_configuration_temperature_cool_white_preset_text">Cool White</string>
+    <string name="light_configuration_saturation_label_text">Saturation</string>
+    <string name="light_configuration_color_hex_dialog_title">Type Hex Color Code</string>
+    <string name="light_configuration_color_hex_dialog_hint">Color Code</string>
+    <string name="light_configuration_color_hex_dialog_confirm_button_text">Use</string>
+    <string name="light_configuration_fire_effect_name">Fire</string>
+    <string name="light_configuration_police_effect_name">Police</string>
+    <string name="light_configuration_faulty_globe_effect_name">Faulty Globe</string>
+    <string name="light_configuration_paparazzi_effect_name">Paparazzi</string>
+    <string name="light_configuration_fireworks_effect_name">Fireworks</string>
+    <string name="light_configuration_lightning_effect_name">Lightning</string>
+    <string name="light_configuration_disco_effect_name">Disco/Party</string>
+    <string name="light_configuration_pulsing_effect_name">Pulsing</string>
+    <string name="light_configuration_tv_effect_name">TV</string>
+    <string name="light_configuration_strobe_effect_name">Strobe</string>
+
+    <!-- region Lights Firmware Update -->
+    <string name="lights_update_title">Firmware Updates</string>
+    <string name="lights_update_update_label">Update</string>
+    <string name="lights_update_done_label">Done</string>
+    <string name="lights_update_firmware_version">Firmware version %s</string>
+    <string name="lights_update_latest_version_installed">Latest version installed</string>
+    <string name="lights_update_progress_percentage">%d\%%</string>
+
+    <!-- region Image Color Picker -->
+    <string name="image_color_picker_pick_color_button_text">Pick Color</string>
+    <string name="image_color_picker_use_color_button_text">Use Color</string>
+    <string name="image_color_picker_denied_camera_permissions_instructions">Slite unfortunately does not have access to the camera. Access can be changed in Settings.</string>
+    <string name="image_color_picker_denied_gallery_permissions_instructions">Slite unfortunately does not have access to the gallery. Access can be changed in Settings.</string>
+    <string name="image_color_picker_no_image_selected_from_gallery">Select a photo using the (gallery icon) button.</string>
+
+    <!-- region Permissions Rationale -->
+    <string name="rationale_dialog_camera_permissions_title">Camera Permissions</string>
+    <string name="rationale_dialog_camera_permissions_description">The app requires access to your camera to allow you to pick a color from your surroundings.</string>
+    <string name="rationale_dialog_gallery_permissions_title">Read External Storage Permissions</string>
+    <string name="rationale_dialog_gallery_permissions_description">The app requires access to your external storage to allow you to pick a color from an image in your gallery.</string>
+    <string name="rationale_dialog_dismiss_button_text">Dismiss</string>
+    <string name="rationale_dialog_camera_permissions_settings_button_text">Open Settings</string>
+    <string name="rationale_dialog_location_permissions_title">Location Permissions</string>
+    <string name="rationale_dialog_location_permissions_description">The app requires access to your location in order to be able to discover nearby Slite bluetooth devices.</string>
+    <string name="rationale_dialog_bluetooth_permissions_title">Bluetooth Permissions</string>
+    <string name="rationale_dialog_bluetooth_permissions_description">The app requires access to your phones\'s bluetooth capabilities in order to be able to discover nearby Slite devices.</string>
+
+    <!-- region Create Group -->
+    <string name="create_group_confirm_selection_button_text">Next</string>
+    <string name="create_group_title">Selected Lights</string>
+    <string name="create_group_name_dialog_title">Group Name</string>
+    <string name="create_group_name_dialog_confirm_button_text">Create Group</string>
+    <string name="create_group_delete_containing_scenes_dialog_title">Are you sure you want to create this group?</string>
+    <string name="create_group_delete_containing_scenes_dialog_description">Grouping the selected lights will lead to deleting the following scenes that they are a part of:</string>
+    <string name="create_group_delete_containing_scenes_dialog_confirm_button_text">Delete scenes and proceed</string>
+
+    <!-- region Effects -->
+    <string name="effects_player_service_description">This service is used to send Bluetooth commands to Slite devices that are set to play an effect.</string>
+    <string name="effects_notification_title">Slite Effect(s) Playing</string>
+    <string name="effects_notification_content_text">Slite is currently sending instructions to your device(s).</string>
+    <string name="effects_notification_channel_name">Effects Notifications</string>
+
+    <!-- region Missing Capabilities -->
+    <string name="missing_capabilities_bluetooth_description">The app requires Bluetooth to be turned on in order to communicate with the Slites</string>
+    <string name="missing_capabilities_bluetooth_permissions_description">The app requires Bluetooth permissions in order to communicate with the Slites</string>
+    <string name="missing_capabilities_settings_button_text">Go to settings</string>
+
+    <!-- region Photo Sensitivity Warning -->
+    <string name="photo_sensitivity_warning_description">Some effects contain bright, flashing lights and/or patterns that may cause discomfort and/or seizures for those with photosensitive conditions. User discretion is advised.</string>
+    <string name="photo_sensitivity_acknowledgement_button_text">I understand and would like to proceed</string>
+
+    <!-- region Support -->
+    <string name="support_dialog_title">Support</string>
+    <string name="support_dialog_privacy_policy">• Privacy Policy</string>
+    <string name="support_dialog_terms_of_use">• Terms of Use</string>
+    <string name="support_dialog_contact">• Get in Touch</string>
+    <string name="support_dialog_update">• Firmware Updates Available</string>
+    <string name="support_dialog_app_version_text_format">App Version: %s</string>
+    <string name="support_email_app_chooser_title">Choose app to write a support email</string>
+    <string name="support_dialog_email_client_not_found_description">Could not find any email client to perform this action. Use hello@slite.co alternatively</string>
+
+    <!-- region App Update -->
+    <!--    <string name="app_update_downloaded_informational_text">An update for Slite has just been downloaded.</string>-->
+    <!--    <string name="app_update_downloaded_apply_update_button_text">RESTART</string>-->
+    <!--    <string name="app_update_failed_message">App update failed.</string>-->
+    <!--    <string name="app_update_cancelled_message">App update cancelled.</string>-->
+    <string name="app_update_recommended_install_title">New update available</string>
+    <string name="app_update_recommended_install_description">An improved version of Slite is now available in the Google Play Store</string>
+    <string name="app_update_recommended_install_dismiss_button_text">Later</string>
+    <string name="app_update_mandatory_install_title">"Slite" needs to be updated</string>
+    <string name="app_update_mandatory_install_description">You need the latest version of slite to keep using it on your device</string>
+    <string name="app_update_install_button_text">Update now</string>
+</resources>

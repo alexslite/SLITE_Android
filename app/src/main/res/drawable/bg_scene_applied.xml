@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+
+            <corners android:radius="@dimen/lights_list_item_corner_radius" />
+            <solid android:color="@color/lights_list_light_item_background_color" />
+        </shape>
+    </item>
+
+    <item
+        android:width="@dimen/lights_list_power_button_size"
+        android:height="@dimen/lights_list_power_button_size"
+        android:bottom="@dimen/scenes_list_item_power_button_margin_vertical"
+        android:drawable="@drawable/ic_checkmark"
+        android:start="@dimen/horizontal_guideline"
+        android:top="@dimen/scenes_list_item_power_button_margin_vertical" />
+</layer-list>

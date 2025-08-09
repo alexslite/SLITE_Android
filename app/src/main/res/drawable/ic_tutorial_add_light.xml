@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="@dimen/lights_add_tutorial_button_inside_padding"
+        android:drawable="@drawable/ic_add"
+        android:end="@dimen/lights_add_tutorial_button_inside_padding"
+        android:start="@dimen/lights_add_tutorial_button_inside_padding"
+        android:top="@dimen/lights_add_tutorial_button_inside_padding" />
+
+    <item>
+        <shape android:shape="oval">
+            <size
+                android:width="@dimen/add_component_home_button_size"
+                android:height="@dimen/add_component_home_button_size" />
+            <stroke
+                android:width="@dimen/lights_add_tutorial_button_highlight_circle_stroke_width"
+                android:color="@color/lights_add_tutorial_button_stroke_color" />
+        </shape>
+    </item>
+</layer-list>

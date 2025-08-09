@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class=".FragmentLightConfigurationBinding" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/configurationOptionsContainerCL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_corners_bottom_sheet_dialog"
+            android:clickable="true"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingHorizontal="@dimen/horizontal_guideline"
+            app:layout_constraintBottom_toTopOf="@id/configurationNavigationBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1">
+
+            <ImageView
+                android:id="@+id/dialogDragableIndicatorIV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/light_configuration_dragable_indicator_height"
+                android:clickable="true"
+                android:src="@drawable/ic_dialog_dragable_area_indicator"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <com.daimajia.swipe.SwipeLayout
+                android:id="@+id/swipeLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/light_configuration_details_card_margin_top"
+                app:clickToClose="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dialogDragableIndicatorIV">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <include
+                        android:id="@+id/editSliteNameBtn"
+                        layout="@layout/part_light_swipe_layout_action"
+                        android:layout_width="@dimen/light_swipe_action_button_width"
+                        android:layout_height="@dimen/light_swipe_action_button_height"
+                        android:layout_marginHorizontal="@dimen/light_swipe_first_action_button_margin_horizontal"
+                        app:actionIcon="@{@drawable/ic_rename}"
+                        app:actionName="@{@string/light_swipe_edit_action_text}"
+                        app:backgroundColor="@{@color/light_swipe_edit_action_button_background_color}" />
+
+                    <include
+                        android:id="@+id/deleteSliteBtn"
+                        layout="@layout/part_light_swipe_layout_action"
+                        android:layout_width="@dimen/light_swipe_action_button_width"
+                        android:layout_height="@dimen/light_swipe_action_button_height"
+                        app:actionIcon="@{@drawable/ic_delete}"
+                        app:actionName="@{@string/light_swipe_delete_action_text}"
+                        app:backgroundColor="@{@color/light_swipe_delete_action_button_background_color}" />
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/lightInfoContainerCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/lights_list_light_item_collapsed_height"
+                    android:background="@drawable/bg_light_item"
+                    android:backgroundTint="@color/light_configuration_details_card_background_color">
+
+                    <ImageButton
+                        android:id="@+id/lightPowerIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/light_details_card_power_button_margin_vertical"
+                        android:layout_marginStart="@dimen/horizontal_guideline"
+                        android:background="@drawable/bg_power_button"
+                        android:foreground="@drawable/ripple_lights_power_button"
+                        android:src="@drawable/ic_power"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/lightNameTV"
+                        style="@style/Subtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/light_details_card_title_margin_start"
+                        android:layout_marginEnd="@dimen/light_details_card_title_margin_end"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        app:layout_constraintBottom_toTopOf="@id/sliteStatusTV"
+                        app:layout_constraintEnd_toStartOf="@id/openActionsIB"
+                        app:layout_constraintStart_toEndOf="@id/lightPowerIV"
+                        app:layout_constraintTop_toTopOf="@id/lightPowerIV"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        tools:text="Office" />
+
+                    <TextView
+                        android:id="@+id/sliteStatusTV"
+                        style="@style/Info"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:textColor="@color/light_details_card_status_text_color"
+                        app:layout_constraintBottom_toBottomOf="@id/lightPowerIV"
+                        app:layout_constraintEnd_toEndOf="@id/lightNameTV"
+                        app:layout_constraintStart_toStartOf="@id/lightNameTV"
+                        app:layout_constraintTop_toBottomOf="@id/lightNameTV"
+                        tools:text="Turned on" />
+
+                    <ImageButton
+                        android:id="@+id/openActionsIB"
+                        style="?actionButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/light_configuration_details_card_actions_button_margin_end"
+                        android:src="@drawable/ic_options"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.daimajia.swipe.SwipeLayout>
+
+            <FrameLayout
+                android:id="@+id/lightConfigurationsContainerFL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_guideline"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/swipeLayout">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lightConfigurationOptionsRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_brightness_configuration" />
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.sliteptyltd.slite.views.configurationnavigation.ConfigurationBottomNavigationView
+            android:id="@+id/configurationNavigationBar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/bottom_navigation_bar_height"
+            android:background="@color/bottom_navigation_bar_background"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

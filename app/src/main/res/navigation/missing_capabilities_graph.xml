@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/missing_capabilities_graph"
+    app:startDestination="@id/missingCapabilitiesFragment">
+
+    <action
+        android:id="@+id/action_global_to_missingCapabilitiesFragment"
+        app:destination="@id/missingCapabilitiesFragment" />
+
+    <fragment
+        android:id="@+id/missingCapabilitiesFragment"
+        android:name="com.sliteptyltd.slite.feature.missingcapabilities.MissingCapabilitiesFragment"
+        android:label="MissingCapabilitiesFragment"
+        tools:layout="@layout/fragment_missing_capabilities">
+
+        <argument
+            android:name="missingCapability"
+            app:argType="com.sliteptyltd.slite.feature.missingcapabilities.MissingCapability"
+            app:nullable="false" />
+    </fragment>
+</navigation>

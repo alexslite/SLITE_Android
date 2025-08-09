@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lights_graph"
+    app:startDestination="@id/lightsFragment">
+
+    <fragment
+        android:id="@+id/lightsFragment"
+        android:name="com.sliteptyltd.slite.feature.lights.LightsFragment"
+        android:label="LightsFragment"
+        tools:layout="@layout/fragment_lights">
+
+        <action
+            android:id="@+id/action_lightsFragment_to_addLightFragment"
+            app:destination="@id/addLightFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_lightsFragment_to_lightConfigurationDialogFragment"
+            app:destination="@id/lightConfigurationDialogFragment" />
+
+        <action
+            android:id="@+id/action_lightsFragment_to_createGroupFragment"
+            app:destination="@id/createGroupFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_lightFragment_to_updateLightsFragment"
+            app:destination="@id/updateLightFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/updateLightFragment"
+        android:name="com.sliteptyltd.slite.feature.updatelights.UpdateLightsFragment"
+        android:label="UpdateLightFragment" />
+
+    <fragment
+        android:id="@+id/addLightFragment"
+        android:name="com.sliteptyltd.slite.feature.addlight.AddLightFragment"
+        android:label="AddLightFragment"
+        tools:layout="@layout/fragment_add_light">
+
+        <action
+            android:id="@+id/action_addLightFragment_to_settingUpSliteFragment"
+            app:destination="@id/settingUpSliteFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/addLightFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingUpSliteFragment"
+        android:name="com.sliteptyltd.slite.feature.addlight.setupslite.SettingUpSliteFragment"
+        android:label="SettingUpSliteFragment"
+        tools:layout="@layout/fragment_setting_up_slite">
+
+        <argument
+            android:name="sliteName"
+            app:argType="string"
+            app:nullable="false" />
+
+        <argument
+            android:name="sliteAddress"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/lightConfigurationDialogFragment"
+        android:name="com.sliteptyltd.slite.feature.lightconfiguration.LightConfigurationDialogFragment"
+        android:label="LightConfigurationDialogFragment"
+        tools:layout="@layout/dialog_fragment_light_configuration">
+
+        <argument
+            android:name="lightId"
+            app:argType="integer"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/action_lightConfigurationDialogFragment_to_imageColorPickerFragment"
+            app:destination="@id/imageColorPickerFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_lightConfigurationDialogFragment_to_photoSensitivityWarningFragment"
+            app:destination="@id/photoSensitivityWarningFragment" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/imageColorPickerFragment"
+        android:name="com.sliteptyltd.slite.feature.lightconfiguration.imagecolor.ImageColorPickerFragment"
+        android:label="ImageColorPickerFragment"
+        tools:layout="@layout/fragment_image_color_picker">
+
+        <argument
+            android:name="lightConfigurationDetails"
+            app:argType="com.sliteptyltd.slite.feature.lightconfiguration.LightConfigurationDetails"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/action_imageColorPickerFragment_to_lightConfigurationDialogFragment"
+            app:destination="@id/lightConfigurationDialogFragment"
+            app:popUpTo="@id/imageColorPickerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.sliteptyltd.slite.feature.groups.CreateGroupFragment"
+        android:label="CreateGroupFragment"
+        tools:layout="@layout/fragment_create_group" />
+
+    <fragment
+        android:id="@+id/photoSensitivityWarningFragment"
+        android:name="com.sliteptyltd.slite.feature.lightconfiguration.photosensitivity.PhotoSensitivityWarningFragment"
+        android:label="PhotoSensitivityWarningFragment">
+
+        <argument
+            android:name="selectedLightId"
+            app:argType="integer" />
+
+        <argument
+            android:name="lightAddress"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="lightConfiguration"
+            app:argType="com.sliteptyltd.slite.data.model.light.LightConfiguration"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/action_photoSensitivityWarningFragment_to_lightConfigurationDialogFragment"
+            app:destination="@id/lightConfigurationDialogFragment"
+            app:popUpTo="@id/photoSensitivityWarningFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

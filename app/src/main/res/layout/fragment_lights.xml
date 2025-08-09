@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lightsTitleTV"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_guideline"
+        android:text="@string/lights_screen_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_marginTop="24dp" />
+
+    <ImageButton
+        android:id="@+id/reconnectLightsBtn"
+        android:layout_width="@dimen/add_component_home_button_size"
+        android:layout_height="@dimen/add_component_home_button_size"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/bg_add_button_ripple"
+        android:src="@drawable/ic_refresh"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@id/addSliteBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:layout_marginTop="24dp" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/reconnectLoadingIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:indicatorColor="@color/progress_button_indicator_color"
+        app:indicatorSize="24dp"
+        app:layout_constraintBottom_toBottomOf="@id/reconnectLightsBtn"
+        app:layout_constraintEnd_toEndOf="@id/reconnectLightsBtn"
+        app:layout_constraintStart_toStartOf="@id/reconnectLightsBtn"
+        app:layout_constraintTop_toTopOf="@id/reconnectLightsBtn" />
+
+    <ImageButton
+        android:id="@+id/addSliteBtn"
+        android:layout_width="@dimen/add_component_home_button_size"
+        android:layout_height="@dimen/add_component_home_button_size"
+        android:layout_marginEnd="@dimen/add_component_home_button_margin_end"
+        android:background="@drawable/bg_add_button_ripple"
+        android:src="@drawable/ic_add"
+        app:layout_constraintEnd_toStartOf="@id/moreBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:layout_marginTop="24dp" />
+
+    <ImageButton
+        android:id="@+id/moreBtn"
+        android:layout_width="@dimen/add_component_home_button_size"
+        android:layout_height="@dimen/add_component_home_button_size"
+        android:layout_marginEnd="@dimen/add_component_home_button_margin_end"
+        android:background="@drawable/bg_add_button_ripple"
+        android:src="@drawable/ic_more"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:layout_marginTop="24dp" />
+
+    <com.sliteptyltd.slite.views.statelayout.StateLayout
+        android:id="@+id/stateLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addSliteBtn">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lightsListRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingHorizontal="@dimen/horizontal_guideline"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_light" />
+    </com.sliteptyltd.slite.views.statelayout.StateLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_navigation_bar_height"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <ImageButton
+        android:id="@+id/lightsTabIconIB"
+        style="?actionButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/bottom_navigation_tabs_margin_horizontal"
+        android:background="@null"
+        android:src="@drawable/ic_lights_tab"
+        app:layout_constraintEnd_toStartOf="@id/scenesTabIconIB"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/bottom_navigation_selected_item_tint"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/scenesTabIconIB"
+        style="?actionButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/bottom_navigation_tabs_margin_horizontal"
+        android:background="@null"
+        android:src="@drawable/ic_scenes_tab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lightsTabIconIB"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/bottom_navigation_unselected_item_tint"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/lightsTabTitleTV"
+        style="@style/BottomNavigationLabelTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bottom_navigation_lights_menu_option_title"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/lightsTabIconIB"
+        app:layout_constraintEnd_toEndOf="@id/lightsTabIconIB"
+        app:layout_constraintStart_toStartOf="@id/lightsTabIconIB"
+        app:layout_constraintTop_toBottomOf="@id/lightsTabIconIB" />
+
+    <TextView
+        android:id="@+id/scenesTabTitleTV"
+        style="@style/BottomNavigationLabelTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bottom_navigation_scenes_menu_option_title"
+        app:layout_constraintBottom_toBottomOf="@id/scenesTabIconIB"
+        app:layout_constraintEnd_toEndOf="@id/scenesTabIconIB"
+        app:layout_constraintStart_toStartOf="@id/scenesTabIconIB"
+        app:layout_constraintTop_toBottomOf="@id/scenesTabIconIB" />
+
+    <View
+        android:id="@+id/selectedTabIndicatorV"
+        android:layout_width="@dimen/bottom_navigation_selected_tab_indicator_size"
+        android:layout_height="@dimen/bottom_navigation_selected_tab_indicator_size"
+        android:background="@drawable/ic_selected_bottom_navigation_tab_indicator"
+        app:layout_constraintBottom_toBottomOf="@id/lightsTabTitleTV"
+        app:layout_constraintEnd_toEndOf="@id/lightsTabTitleTV"
+        app:layout_constraintStart_toStartOf="@id/lightsTabTitleTV"
+        app:layout_constraintTop_toTopOf="@id/lightsTabTitleTV" />
+</merge>

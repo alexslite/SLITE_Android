@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corners_bottom_sheet_dialog"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/horizontal_guideline">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_sheet_dialog_dragable_area_margin_top"
+        android:src="@drawable/ic_dialog_dragable_area_indicator"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        style="@style/Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/light_configuration_color_title_margin_top"
+        android:text="@string/light_configuration_color_hex_dialog_title" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/colorHexTIL"
+        style="@style/SliteTextInputLayoutTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/light_configuration_color_input_margin_top"
+        android:hint="@string/light_configuration_color_hex_dialog_hint"
+        android:orientation="vertical"
+        android:textColorHint="@color/edit_text_hint_color"
+        android:theme="@style/SliteTextInputLayoutTheme"
+        app:hintEnabled="true"
+        app:hintTextColor="@color/edit_text_hint_color"
+        app:prefixText="#"
+        app:prefixTextAppearance="@style/Body"
+        app:prefixTextColor="@color/text_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/colorHexTIET"
+            style="@style/Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="textVisiblePassword"
+            android:maxLength="6" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/doneBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/light_configuration_color_hex_dialog_confirm_button_margin_top"
+        android:layout_marginBottom="@dimen/light_configuration_color_button_margin_bottom"
+        android:enabled="false"
+        android:text="@string/light_configuration_color_hex_dialog_confirm_button_text" />
+</LinearLayout>
